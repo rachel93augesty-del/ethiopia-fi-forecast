@@ -1,0 +1,9 @@
+#task-1 Requirements
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
+seaborn>=0.12
+jupyter>=1.0
+notebook>=7.0
+pyyaml>=6.0
+pytest>=7.4
