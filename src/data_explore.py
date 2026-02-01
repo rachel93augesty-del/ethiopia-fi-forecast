@@ -100,6 +100,7 @@ def basic_exploration(data_df, impact_df):
 # -----------------------------
 # 4. Enrich dataset (full)
 # -----------------------------
+   
 def enrich_data(data, impact_links, collected_by="Unknown"):
     """
     Add all critical observations, events, and impact links identified from exploration.
