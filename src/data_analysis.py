@@ -27,21 +27,14 @@ def load_dataset(path: str) -> pd.DataFrame:
 
 
 # 2. Summarize dataset
-def summarize_dataset(df: pd.DataFrame) -> pd.DataFrame:
+
+def summarize_dataset(df, col_name):
     """
-    Summarize dataset by counting records per indicator.
-    
-    Args:
-        df (pd.DataFrame): Input dataset.
-    
-    Returns:
-        pd.DataFrame: Summary with columns ['indicator', 'count'].
+    Summarize a single column of the DataFrame.
     """
-    if 'indicator' not in df.columns:
-        raise KeyError("Dataset must contain 'indicator' column")
-    
-    summary = df.groupby('indicator').size().reset_index(name='count')
+    summary = df.groupby(col_name).size().reset_index(name="count")
     return summary
+
 
 
 # 3. Temporal coverage
