@@ -1,8 +1,6 @@
-# Task 1 minimal dependencies
-pandas==2.0.3
-numpy==1.26.2
-matplotlib==3.8.0
-openpyxl==3.1.2
-python-json-logger==4.0.0
-ipython==9.9.0
-pytest==8.2.2
+pandas>=2.0.3            # for data handling
+numpy>=1.26.2            # for numerical computations
+matplotlib>=3.8.0        # for plotting charts
+seaborn>=0.12.2          # for statistical plots
+openpyxl>=3.1.2          # if reading/writing Excel files
+python-json-logger>=4.0.0 # optional, if you want structured logging
