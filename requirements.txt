@@ -1,9 +1,17 @@
-#task-1 Requirements
-pandas>=2.0
-numpy>=1.24
-matplotlib>=3.7
-seaborn>=0.12
+#task-3 Requirements
+
+# Core data handling
+numpy>=2.0
+pandas>=2.2
+
+# Visualization
+matplotlib>=3.9
+seaborn>=0.13
+
+# Jupyter
 jupyter>=1.0
-notebook>=7.0
-pyyaml>=6.0
-pytest>=7.4
+ipykernel>=6.29
+
+# Utilities
+python-dateutil>=2.9
+openpyxl>=3.1
