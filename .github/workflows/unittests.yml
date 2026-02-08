@@ -4,24 +4,12 @@ on:
   push:
     branches:
       - main
-task-4
       - task-4
+    
   pull_request:
     branches:
       - main
       - task-4
-
-      - task-3
-      
-      - task-2
-main
-  
-  pull_request:
-    branches:
-      - main
-     
- main
-
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -30,19 +18,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-task-4
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.13"
 
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: "3.10"
+    name: Set up Python
+    uses: actions/setup-python@v5
+    with:
+        python-version: "3.13"
 
 
-   
-main
-main
- main
