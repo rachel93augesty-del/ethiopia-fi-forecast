@@ -22,3 +22,9 @@ ipykernel>=6.30
 
 # Scenario / Uncertainty
 uncertainties>=3.2
+
+#task-5
+# Dashboard / App
+streamlit>=1.31
+altair>=5.2
+streamlit-option-menu>=0.3
