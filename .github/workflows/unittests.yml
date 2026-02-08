@@ -4,15 +4,15 @@ on:
   push:
     branches:
       - main
-<<<<<<< HEAD
       - task-3
-=======
+      
       - task-2
->>>>>>> main
+main
+  
   pull_request:
     branches:
       - main
-      - task-3
+     
 
 jobs:
   test:
@@ -27,10 +27,6 @@ jobs:
       with:
         python-version: "3.10"
 
-<<<<<<< HEAD
-=======
-task-2
-  
 
    
 main
