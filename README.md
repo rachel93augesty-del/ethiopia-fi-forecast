@@ -1,7 +1,8 @@
 Ethiopia Financial Inclusion Forecasting – Capstone Project
+
 Project Overview
 
-This capstone project focuses on analyzing and forecasting financial inclusion in Ethiopia, leveraging the Global Findex Database 2025 along with supplementary regional and gender-disaggregated data. The project aims to provide actionable insights for policymakers, financial institutions, and stakeholders to improve account ownership, mobile money adoption, and overall digital payment usage across the country.
+This capstone project focuses on improving the previousely done project focusing on analyzing and forecasting financial inclusion in Ethiopia, leveraging the Global Findex Database 2025 along with supplementary regional and gender-disaggregated data. The project aims to provide actionable insights for policymakers, financial institutions, and stakeholders to improve account ownership, mobile money adoption, and overall digital payment usage across the country.
 
 Objectives
 
