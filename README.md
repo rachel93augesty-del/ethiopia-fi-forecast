@@ -1,154 +1,91 @@
-# Forecasting Financial Inclusion in Ethiopia
+Ethiopia Financial Inclusion Forecasting – Capstone Project
+Project Overview
 
-## 10 Academy – Artificial Intelligence Mastery (Week 10 Challenge)
+This capstone project focuses on analyzing and forecasting financial inclusion in Ethiopia, leveraging the Global Findex Database 2025 along with supplementary regional and gender-disaggregated data. The project aims to provide actionable insights for policymakers, financial institutions, and stakeholders to improve account ownership, mobile money adoption, and overall digital payment usage across the country.
 
----
+Objectives
 
-## Executive Summary
-This project develops a data-driven forecasting system to analyze and predict Ethiopia’s financial inclusion trajectory, focusing on **Access** (account ownership) and **Usage** (digital payment adoption) as defined by the World Bank Global Findex.
+Assess historical trends in financial inclusion metrics: account ownership, formal accounts, and mobile money adoption.
 
-Despite rapid growth in digital financial services such as Telebirr and M-Pesa, recent Global Findex data shows that financial inclusion growth has slowed. This project investigates the drivers of inclusion, estimates the impact of key national events and policies, and forecasts financial inclusion outcomes for **2025–2027** under multiple scenarios.
+Identify gaps in the dataset, including temporal, regional, and gender-specific data gaps.
 
-The final outputs include enriched datasets, analytical notebooks, event-impact models, forecasts with uncertainty bounds, and an interactive dashboard for policymakers and financial sector stakeholders.
+Enrich data with event impacts (e.g., Telebirr launch) to analyze adoption drivers.
 
----
+Develop forecasts for financial inclusion indicators (2025–2027) under baseline and scenario assumptions.
 
-## Business Context
-Ethiopia is undergoing a major digital financial transformation:
-- Telebirr has exceeded 54 million registered users since 2021
-- M-Pesa entered the Ethiopian market in 2023
-- Interoperable digital transfers have surpassed ATM cash withdrawals
+Create an interactive dashboard to visualize trends, forecast projections, and scenario comparisons.
 
-However, according to the **2024 Global Findex**, only **49%** of Ethiopian adults have a financial account — an increase of just **3 percentage points** since 2021.
+Success Metrics
 
-Stakeholders seek answers to:
-- What drives financial inclusion in Ethiopia?
-- How do policies, infrastructure, and product launches affect outcomes?
-- What will inclusion levels look like in 2025–2027?
+The success of this project is evaluated against the following indicators:
 
----
+Account Ownership (Access): Projected growth to ~68–70% by 2027.
 
-## Key Indicators (Global Findex Definitions)
+Digital Payment Usage (Mobile Money): Upward trend with ~66% active users by 2027.
 
-### 1. Access — Account Ownership
-Percentage of adults (15+) who have an account at a financial institution or personally use a mobile money service.
+Event Impact Modeling: Alignment with historical adoption patterns (e.g., policy and product launches).
 
-### 2. Usage — Digital Payments
-Percentage of adults who made or received a digital payment in the past 12 months.
+Project Scope
 
----
+Historical Analysis: Trends in account ownership, formal account adoption, and mobile money usage from 2011 to 2025.
 
-## Data Description
+Disaggregation: Data analyzed by gender and region to identify inclusion gaps.
 
-### Unified Dataset Design
-The project uses a **unified data schema**, where all records share the same structure but represent different concepts based on the `record_type` field:
+Forecasting: Baseline and scenario projections to support strategic financial planning.
 
-| record_type | Description |
-|------------|-------------|
-| Observation | Measured data points (survey, operator, infrastructure data) |
-| Event | Policies, product launches, regulatory changes, milestones |
-| impact_link | Modeled relationships between events and indicators |
-| Target | Official policy or strategic targets |
+Event Analysis: Integration of key events and product launches to understand adoption dynamics.
 
-Events are **pillar-neutral**. Their effects on specific indicators are modeled through `impact_link` records to avoid analytical bias.
+Dashboard: Interactive visualization of historical trends, forecasts, and scenario comparisons.
 
-### Data Sources
-- World Bank Global Findex
-- National Bank of Ethiopia
-- IMF Financial Access Survey
-- GSMA Mobile Economy Reports
-- Ethio Telecom
-- EthSwitch
-- Fayda Digital ID Program
-- Shega Media
+Deliverables Completed (Interim Submission)
 
----
+Reviewed the original dataset and project report.
 
-## Project Structure
-```text
-ethiopia-fi-forecast/
-├── .github/workflows/
-│   └── unittests.yml
-├── data/
-│   ├── raw/
-│   │   ├── ethiopia_fi_unified_data.csv
-│   │   └── reference_codes.csv
-│   └── processed/
-├── notebooks/
-│   ├── task_1_data_exploration.ipynb
-│   ├── task_2_eda.ipynb
-│   ├── task_3_event_impact.ipynb
-│   └── task_4_forecasting.ipynb
-├── src/
-│   └── __init__.py
-├── dashboard/
-│   └── app.py
-├── tests/
-│   └── __init__.py
-├── models/
-├── reports/
-│   └── figures/
-├── requirements.txt
-├── README.md
-└── .gitignore
+Identified gaps in historical and disaggregated data, including missing values in MobileMoney_Overall, Account_Overall, and FI_Account_Overall.
 
-Methodology Overview
-Task 1: Data Exploration & Enrichment
+Documented key columns critical to the improvement plan.
 
-Explored unified schema and reference codes
+Collected supplementary data:
 
-Assessed temporal coverage and data gaps
+Gender-disaggregated statistics
 
-Enriched dataset with infrastructure, technology, and policy indicators
+Regional-level adoption metrics
 
-Documented all additions with sources and confidence levels
+Usage frequency details
 
-Task 2: Exploratory Data Analysis
+Documented all data sources and transformations.
 
-Analyzed trends in account ownership and digital payments
+Saved the cleaned and enriched dataset for further analysis.
 
-Investigated gender, urban–rural, and usage gaps where data allowed
+Next Steps
 
-Examined relationships between infrastructure and inclusion
+ Refine Event-Indicator Matrix, incorporate new evidence, implement dynamic lag effects.
+ Update forecasting models using enriched data; generate improved baseline and scenario projections.
 
-Visualized event timelines alongside indicator trends
+ Enhance the dashboard with updated visualizations, confidence intervals, and scenario comparisons; finalize documentation for final submission.
 
-Task 3: Event Impact Modeling
+Data Summary
 
-Modeled how events affect indicators using impact_link records
+Original Dataset: Global Findex Database 2025
 
-Built an event–indicator association matrix
+Supplementary Data: Gender, regional, and usage frequency metrics.
 
-Incorporated evidence from comparable countries where local data was sparse
+Cleaned Dataset Shape: ~8,500 rows × 7 columns (Year, Adult_Population, Account_Overall, FI_Account_Overall, MobileMoney_Overall, Gender, Group)
 
-Validated estimated impacts against historical outcomes
+Missing Values: Interpolated for most indicators; MobileMoney_Overall has minimal remaining gaps to be addressed in forecasting.
 
-Task 4: Forecasting (2025–2027)
+Tools & Methods
 
-Developed baseline trend forecasts
+Python: pandas, numpy, matplotlib, seaborn
 
-Built event-augmented forecasts
+Data Cleaning & Preprocessing: Interpolation, handling missing values, numeric conversions
 
-Produced optimistic, base, and pessimistic scenarios
+Exploratory Analysis: National, regional, and gender trends visualization
 
-Quantified uncertainty using confidence intervals
+Event-Indicator Analysis: Linking policy/product launches to adoption trends
 
-Task 5: Dashboard Development
+Forecasting: Baseline and scenario projections for 2025–2027
 
-Built an interactive Streamlit dashboard
+Dashboard Development: Interactive visualizations to communicate insights
 
-Visualized trends, event impacts, and forecasts
-
-Enabled scenario selection and data download
-
-Key Outputs
-
-Enriched financial inclusion dataset
-
-Event–indicator impact matrix
-
-Forecasts for Access and Usage (2025–2027)
-
-Interactive dashboard for stakeholders
-
-Final analytical report (blog-style)
+✅ Interim Status: Data cleaning and enrichment completed; national and regional datasets prepared for trend analysis and forecasting. Project is on track for subsequent steps (event modeling, forecasting, and dashboard enhancement).
